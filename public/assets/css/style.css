@@ -1,0 +1,57 @@
+* {
+    background-color: blanchedalmond;
+}
+
+#main-burger-pic {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    display: flex;
+}
+
+.burger-holder {
+    display: flex;
+    justify-content: space-around;
+}
+
+.burger-body {
+    border: solid 1px black;
+    flex-basis: 30%;
+    text-align: center;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    margin: auto;
+    text-align: center;
+}
+
+.button-holder {
+    margin: auto;
+    width: 300px;
+}
+
+#burgerName:valid {
+    background-color: white;
+}
+
+#submit-button {
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: auto;
+}
+
+.devour-burger {
+    background-color: black;
+    color: white;
+}
+
+.undevour-burger {
+    background-color: white;
+    color: black;
+}

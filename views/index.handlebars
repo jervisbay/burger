@@ -1,42 +1,51 @@
 
-<img src="https://cdn0.iconfinder.com/data/icons/cute-food/287/CuteFood_-_Artboard_Icon_Only-04-512.png">
+<img id="main-burger-pic" src="https://cdn0.iconfinder.com/data/icons/cute-food/287/CuteFood_-_Artboard_Icon_Only-04-512.png">
+<br>
 <h1>Eat-Da-Burger!</h1>
 
+<br>
+<div class="burger-holder">
 
 
-<h2>Cats that are not sleepy!</h2>
+<div class="container burger-body">
 
-<ul>
-  {{!-- {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}} --}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
+<h2>Burgers Available!</h2>
 
 <ul>
-  {{!-- {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}} --}}
+  {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block}}
+        {{/unless}}
+      {{/each}}
 </ul>
+</div>
 
-<h2>Add a Cat</h2>
+<div class="container burger-body">
+
+<h2>Burgers Devoured!</h2>
+
+
+<ul>
+  {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block2}}
+        {{/if}}
+      {{/each}}
+</ul>
+</div>
+
+</div>
+<br>
+<h2>Add a Burger</h2>
+<div class="button-holder">
+
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+    <label for="burgerName">Burger Name:</label>
+    <input type="text" id="burgerName" name="burgerName">
   </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
+  
+  <button id="submit-button" type="submit">Add Burger</button>
 </form>
+</div>
